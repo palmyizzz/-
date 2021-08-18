@@ -1,51 +1,15 @@
 <!DOCTYPE html>
 <html>
    <head>
-	 <meta charset="utf-8", name="viewport" content="width=device-width, intitial-scale=1.0">
+	 <meta name="viewport" content="width=device-width, intitial-scale=1.0">
+    <meta charset="utf-8">
 	 <title>KKU Example Picture</title>
       <style> 
       img{
          width: 100%;
          height:auto;
       }
-      /* ---------- iPhone/iPod Only Portrait ---------- */
-@import url('../css/portrait.css') only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait);
-/* ---------- Retina iPhone/iPod Only Portrait ---------- */
-@import url('../css/portrait.css') only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) and (min-device-pixel-ratio : 2) and (max--moz-device-pixel-ratio: 2);
-/* ---------- Non Retina iPhone/iPod Only Portrait ---------- */
-@import url('../css/portrait.css') only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) and (min-device-pixel-ratio : 1) and (max--moz-device-pixel-ratio: 1);
-/* ---------- iPhone5 portrait Only ---------- */
-@import url('../css/portrait.css') only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) and (min-device-pixel-ratio : 2) and (max--moz-device-pixel-ratio: 2);
-
-
-/* ---------- iPhone/iPod Only Landscape ---------- */
-@import url('../css/landscape.css') only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape);
-/* ---------- Retina iPhone/iPod Only landscape ---------- */
-@import url('../css/landscape.css') only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) and (min-device-pixel-ratio : 2) and (max--moz-device-pixel-ratio: 2);
-/* ---------- Non Retina iPhone/iPod Only landscape ---------- */
-@import url('../css/landscape.css') only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) and (min-device-pixel-ratio : 1) and (max--moz-device-pixel-ratio: 1);
-/* ---------- iPhone5 landscape Only ---------- */
-@import url('../css/landscape.css') only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) and (min-device-pixel-ratio : 2) and (max--moz-device-pixel-ratio: 2);
-
-
-
-
-/* ---------- iPad Only Portrait---------- */
-@import url('../css/style_respond.css') only screen and (min-device-width:  768px) and (max-device-width: 1024px) and (orientation: portrait);
-/* ---------- iPad Portrait Retina Device Only ---------- */
-@import url('../css/style_respond.css') only screen and (min-device-width:  768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2)and (min-device-pixel-ratio : 2) and (max--moz-device-pixel-ratio: 2);
-/* ---------- iPad Portrait Non Retina Device Only ---------- */
-@import url('../css/style_respond.css') only screen and (min-device-width:  768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1)and (min-device-pixel-ratio : 1) and (max--moz-device-pixel-ratio: 1) ;
-
-
-/* ---------- iPad Only landscape---------- */
-@import url('../css/style_respond.css') only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape); 
-/* ---------- iPad landscape Retina Device Only ---------- */
-@import url('../css/style_respond.css') only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-max-device-pixel-ratio: 2)and (min-device-pixel-ratio : 2) and (max--moz-device-pixel-ratio: 2) ;
-/* ---------- iPad landscape Non Retina Device Only ---------- */
-@import url('../css/style_respond.css') only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-max-device-pixel-ratio: 1)and (min-device-pixel-ratio : 1) and (max--moz-device-pixel-ratio: 1) ;
-
-@import url('../css/style_respond.css') screen and (orientation:landscape) and (min-width: 1024px);
+     
       @media(orientation: landscape) and (orientation: portrait){
          div.example{
             color: white;
@@ -54,28 +18,30 @@
          }
          
       }
-      @media only screen and(max-height:1080px){
+      @media screen and (max-height:1024px){
+         img.resp{
+            font-size: 80 px;
+            color: white;
+         }
+      }
+      @media screen and (min-height:320px){
          div.example{
             font-size: 80 px;
             color: white;
          }
       }
-      @media only screen and(min-height:480px){
-         div.example{
+      @media screen and(max-width:1024px){
+         img.resp{
             font-size: 80 px;
             color: white;
+            width: 300px;
          }
       }
-      @media only screen and(max-width:768px){
-         div.example{
+      @media screen and(min-width:568px){
+         img.resp{
             font-size: 80 px;
             color: white;
-         }
-      }
-      @media only screen and(min-width:481px){
-         div.example{
-            font-size: 30 px;
-            color: white;
+            width: 800px;
          }
       }
       div{
@@ -152,12 +118,12 @@
    <body>
       
       <h1>Khon Kaen University</h1>
-	   <img src="images/KKU.jpg" width="100%"
-	   height ="100%" alt="KKU Test Image" title="shuttle bus">
+	   <img src="images/KKU.jpg"
+	    alt="KKU Test Image" title="shuttle bus">
       
     <figure>
-        <img src="images/kku2.jpg" width="100%"
-       height ="100%" alt="coe 23" title="Coe 23">
+        <img src="images/kku2.jpg" 
+        alt="coe 23" title="Coe 23">
        <figcaption>Coe 23</figcaption>
        
      

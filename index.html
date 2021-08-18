@@ -5,12 +5,22 @@
 	 <title>KKU Example Picture</title>
       <style> 
       @media(orientation: landscape) and (orientation: portrait){
-         g{
+         p{
             color: white;
             font-size: 36px;
 
          }
          
+      }
+      @media only screen and(max-height:1080px){
+         div.example{
+            font-size: 80 px;
+         }
+      }
+      @media only screen and(min-height:480px){
+         div.example{
+            font-size: 80 px;
+         }
       }
       @media only screen and(max-width:768px){
          div.example{

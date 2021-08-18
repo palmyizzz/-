@@ -8,6 +8,44 @@
          width: 100%;
          height:auto;
       }
+      /* ---------- iPhone/iPod Only Portrait ---------- */
+@import url('../css/portrait.css') only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait);
+/* ---------- Retina iPhone/iPod Only Portrait ---------- */
+@import url('../css/portrait.css') only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) and (min-device-pixel-ratio : 2) and (max--moz-device-pixel-ratio: 2);
+/* ---------- Non Retina iPhone/iPod Only Portrait ---------- */
+@import url('../css/portrait.css') only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) and (min-device-pixel-ratio : 1) and (max--moz-device-pixel-ratio: 1);
+/* ---------- iPhone5 portrait Only ---------- */
+@import url('../css/portrait.css') only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) and (min-device-pixel-ratio : 2) and (max--moz-device-pixel-ratio: 2);
+
+
+/* ---------- iPhone/iPod Only Landscape ---------- */
+@import url('../css/landscape.css') only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape);
+/* ---------- Retina iPhone/iPod Only landscape ---------- */
+@import url('../css/landscape.css') only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) and (min-device-pixel-ratio : 2) and (max--moz-device-pixel-ratio: 2);
+/* ---------- Non Retina iPhone/iPod Only landscape ---------- */
+@import url('../css/landscape.css') only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) and (min-device-pixel-ratio : 1) and (max--moz-device-pixel-ratio: 1);
+/* ---------- iPhone5 landscape Only ---------- */
+@import url('../css/landscape.css') only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) and (min-device-pixel-ratio : 2) and (max--moz-device-pixel-ratio: 2);
+
+
+
+
+/* ---------- iPad Only Portrait---------- */
+@import url('../css/style_respond.css') only screen and (min-device-width:  768px) and (max-device-width: 1024px) and (orientation: portrait);
+/* ---------- iPad Portrait Retina Device Only ---------- */
+@import url('../css/style_respond.css') only screen and (min-device-width:  768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2)and (min-device-pixel-ratio : 2) and (max--moz-device-pixel-ratio: 2);
+/* ---------- iPad Portrait Non Retina Device Only ---------- */
+@import url('../css/style_respond.css') only screen and (min-device-width:  768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1)and (min-device-pixel-ratio : 1) and (max--moz-device-pixel-ratio: 1) ;
+
+
+/* ---------- iPad Only landscape---------- */
+@import url('../css/style_respond.css') only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape); 
+/* ---------- iPad landscape Retina Device Only ---------- */
+@import url('../css/style_respond.css') only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-max-device-pixel-ratio: 2)and (min-device-pixel-ratio : 2) and (max--moz-device-pixel-ratio: 2) ;
+/* ---------- iPad landscape Non Retina Device Only ---------- */
+@import url('../css/style_respond.css') only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-max-device-pixel-ratio: 1)and (min-device-pixel-ratio : 1) and (max--moz-device-pixel-ratio: 1) ;
+
+@import url('../css/style_respond.css') screen and (orientation:landscape) and (min-width: 1024px);
       @media(orientation: landscape) and (orientation: portrait){
          div.example{
             color: white;
@@ -40,7 +78,14 @@
             color: white;
          }
       }
-         
+      div{
+         width: 100%;
+         height: 400px;
+         background-image: url('images/me.jpg');
+         background-size: cover;
+         border: 1px solid red;
+
+      }
       
       h1{
          font-style: italic;

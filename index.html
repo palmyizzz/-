@@ -9,6 +9,7 @@
     let max = 0;
     let sum = 0;
     let check = 1;
+    let sumDeci = 0;
     
    
    
@@ -59,8 +60,10 @@ function showAll(){
         max = integer;
     }
     sum += integer;
+    sumDeci =sum / input.length
+
 }        
-        alert(('For the list ') +input+(' the average is ')+sum.toFixed(2) / input.length+(' , the minimum is  ')+min+(', and the maximum is ')+max);
+        alert(('For the list ') +input+(' the average is ')+sumDeci.toFixed(2)+(' , the minimum is  ')+min+(', and the maximum is ')+max);
 } 
 }
 
@@ -82,14 +85,14 @@ function showAll(){
       </style>
    </head>
    <body>
-       <h3>Statistics Calculator!</h3>
+       <h2>Statistics Calculator!</h2>
       <h1>Write the web app to prompt accepting for positive integer until the user enters a negative integer</h1>
       
       <ul class="n" style="list-style-type: disc;">
          <li>If the entered text is not a positve integer number,then the web app will keep asking for a number until the valid positive integer is enterred</li>
          <li>If the entered text is a negative integer, then the web app will show the statistics(average, min, max) of all entered positive integers</li>
     </ul>
-     <h2>Note:</h2>
+     <h1>Note:</h1>
      <ul class="n" style="list-style-type:decimal;">
      <li>You need to implement functions to check whether an entered text is a postive integer or not and whether an entered text is a negative integer or not</li>
      <li>You need to implement functions to compute average, min and max of a list of integer</li>

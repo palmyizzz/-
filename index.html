@@ -11,34 +11,22 @@
      
             if (isNaN(num)){
        
-    }
-if (num > 1){
- 
+                 }
+            if (num > 1){  
   
+                showPrimes(num);
+                 break outer;
   
-  
-   showPrimes(num);
-
-   break outer;
-
-  
-}
-else if (num < 0) {
+                }
+            else if (num < 0) {
    
-}
-}
-}
-
-
-       
- 
-
-    function showPrimes(n){
+                 }
+             }
+        } 
+     function showPrimes(n){
         for(let i = 2; i < n; i++){
             if(!isPrime(i)) continue;
-            prime.push(i);
-           
-          
+            prime.push(i);         
         }
         alert(('for n = ') +n+(' prime numbers are ' )+prime) ;
     }
@@ -47,14 +35,7 @@ else if (num < 0) {
             if(n%i == 0)return false;
         }
         return true;
-    }
-
-     
-    
-
-     
-   
-     
+    }   
     </script>
       <style> 
       h2{
@@ -70,16 +51,15 @@ else if (num < 0) {
           font-size: larger;
           
       }
-      @media only screen and(max-width:768px){
-         h1{
-            font-size: x-large px;
-         }
-      }
-      @media only screen and(min-width:300px){
-         h1{
-            font-size: small;
-         }
-      }
+     
+
+@media screen and (max-width: 420px ) {
+ 
+    h1 { font-size: large ;}
+    h2 { font-size: small ;}
+  }
+
+
       </style>
    </head>
    <body>

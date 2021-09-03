@@ -1,143 +1,100 @@
 <!DOCTYPE html>
 <html>
    <head>
-	 <meta name="viewport" content="width=device-width, intitial-scale=1.0">
-    <meta charset="utf-8">
-	 <title>KKU Example Picture</title>
-      <style> 
-      img{
-         width: 100%;
-         height:auto;
-      }
+	 <meta charset="utf-8", name="viewport" content="width=device-width, intitial-scale=1.0">
+	 <title>Prob2</title>
+     <script type="text/javascript">
+    let input =[];
+    let min = 10000 ;
+    let max = 0;
+    let sum = 0;
+    let check = 1;
+    
+   
+   
+    
+   
+     outer: for (let i = 0; i < 10; i++){
+         for(let j = 0; j<3; j++){
+            let num = prompt('Enter an integer (a negative integer to quit )', );
      
-      @media(orientation: landscape) and (orientation: portrait){
-         div.example{
-            color: white;
-            font-size: 36px;
+     if (isNaN(num)){
+     }
+ 
+    if (num > 1){    
+    showPositive(num);
+    
+    }
+    else if (num < 0) {
+        
+            showAll();
+            break outer;  
+        }
+   
+    
+ 
+    }
+ }
 
-         }
+  
+
+function showPositive(n){
+      input.push(n);
+    check++;
+     
+   }
+
+
+function showAll(){
+    if(input==('')){
+            alert('For the list the average is 0 , the minimum is 0 , and the maximum is 0');
+        }
+    else{
+        for (let i = 0; i < input.length; i++) {
+        var integer = parseInt(input[i], 10);
+    if (integer < min) {
+        min = integer;
+    }
+    if (integer > max) {
+        max = integer;
+    }
+    sum += integer;
+}        
+        alert(('For the list ') +input+(' the average is ')+sum.toFixed(2) / input.length+(' , the minimum is  ')+min+(', and the maximum is ')+max);
+} 
+}
+
+    </script>
+      <style> 
+      h3{
+          text-align: center;
          
       }
-      @media screen and (max-height:1024px){
-         img.resp{
-            font-size: 80 px;
-            color: white;
-         }
-      }
-      @media screen and (min-height:320px){
-         div.example{
-            font-size: 80 px;
-            color: white;
-         }
-      }
-      @media screen and(max-width:1024px){
-         img.resp{
-            font-size: 80 px;
-            color: white;
-            width: 300px;
-         }
-      }
-      @media screen and(min-width:568px){
-         img.resp{
-            font-size: 80 px;
-            color: white;
-            width: 800px;
-         }
-      }
-      div{
-         width: 100%;
-         height: 400px;
-         background-image: url('images/me.jpg');
-         background-size: cover;
-         border: 1px solid red;
-
-      }
-      
       h1{
-         font-style: italic;
-         font-family: 'Times New Roman', Times, serif;
-         font-size: 120 px;
-         color: rgb(228, 15, 15);
-         line-height: 2;
-         letter-spacing: 1px;
-         text-align: center;
+          text-align: left;
          
-         }   
-      p {
-         
-         font-size: 100 px;
-         color:yellow;
-         line-height: 2;
-         letter-spacing: 1px;
-         font-family: 'Bebas Neue', cursive;
-         font-style: italic;
-        
-        
       }
-      li {
-         font-size: 16 px;
-         color: rgb(6, 6, 255);
-         line-height: 1.5;
-         letter-spacing: 0.75px;
-         font-family: 'Mali', cursive;
-      }
-      html {
-         background-color:  rgb(98, 55, 214);
-        
-      }
-      body {
-         width: 800px;
-         margin: 0 auto;
-         background-color: #FF9500;
-         padding: 0 20px 20px 20px;
-         border: 5px solid black;
-      }
-      figcaption{
-        text-align: center;
-        margin: 0 auto;
-        font-size: 100 px;
-         color:black;
-         line-height: 2;
-         letter-spacing: 1px;
-         font-family: 'Bebas Neue', cursive;
-         font-style: italic;
-      }
-      #heading{
-         background-color :rgb(98, 55, 214);
-      }
-      .popular{
-          padding: 4px;
-          border-radius: 4px;
-          border: 4px dotted red
-      }
-      .pp{
-        color:black;
+      li{
+          text-align: left;
+          font-size: larger;
+          
       }
       </style>
    </head>
    <body>
+       <h3>Statistics Calculator!</h3>
+      <h1>Write the web app to prompt accepting for positive integer until the user enters a negative integer</h1>
       
-      <h1>Khon Kaen University</h1>
-	   <img src="images/KKU.jpg"
-	    alt="KKU Test Image" title="shuttle bus">
-      
-    <figure>
-        <img src="images/kku2.jpg" 
-        alt="coe 23" title="Coe 23">
-       <figcaption>Coe 23</figcaption>
-       
-     
-    </figure>
-      <p id="heading">Cutie Shuttlebus</p> 
-      <ul>
-         <li class="popular">วนรอบมหาลัย</li>
-         <li>ไปไหนก็ทัน</li>
-         <li class="popular">วายฟายก็แรง</li>
+      <ul class="n" style="list-style-type: disc;">
+         <li>If the entered text is not a positve integer number,then the web app will keep asking for a number until the valid positive integer is enterred</li>
+         <li>If the entered text is a negative integer, then the web app will show the statistics(average, min, max) of all entered positive integers</li>
+    </ul>
+     <h1>Note:</h1>
+     <ul class="n" style="list-style-type:decimal;">
+     <li>You need to implement functions to check whether an entered text is a postive integer or not and whether an entered text is a negative integer or not</li>
+     <li>You need to implement functions to compute average, min and max of a list of integer</li>
+            
          
-
       </ul>
-      <p class="pp">If you have a problem please contact us at <a href="http://www.kku.ac.th" target=_blank >Khon Kaen University</a></p>
-     
-   <body>
-     
+     </body>
 </html>

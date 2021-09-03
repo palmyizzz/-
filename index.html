@@ -2,106 +2,79 @@
 <html>
    <head>
 	 <meta charset="utf-8", name="viewport" content="width=device-width, intitial-scale=1.0">
-	 <title>Prob2</title>
+	 <title>Prob1</title>
      <script type="text/javascript">
-    let input =[];
-    let min = 10000 ;
-    let max = 0;
-    let sum = 0;
-    let check = 1;
-    let sumDeci = 0;
-    
-   
-   
-    
-   
-     outer: for (let i = 0; i < 10; i++){
+    const prime =[];
+     outer: for (let i = 0; i < 3; i++){
          for(let j = 0; j<3; j++){
-            let num = prompt('Enter an integer (a negative integer to quit )', );
+            let num = prompt('Enter a positive integer', );
      
-     if (isNaN(num)){
-     }
- 
-    if (num >= 1){    
-    showPositive(num);
-    
+            if (isNaN(num)){
+       
     }
-    else if (num < 0) {
-        
-            showAll();
-            break outer;  
-        }
-   
-    
+if (num > 1){
  
-    }
- }
+  
+  
+  
+   showPrimes(num);
+
+   break outer;
 
   
-
-function showPositive(n){
-      input.push(n);
-   
-     
-   }
-
-
-function showAll(){
-    if(input==('')){
-            alert('For the list the average is 0 , the minimum is 0 , and the maximum is 0');
-        }
-    else{
-        for (let i = 0; i < input.length; i++) {
-        var integer = parseInt(input[i], 10);
-    if (integer < min) {
-        min = integer;
-    }
-    if (integer > max) {
-        max = integer;
-    }
-    sum += integer;
-    sumDeci =sum / input.length
-
-}        
-        alert(('For the list ') +input+(' the average is ')+sumDeci.toFixed(2)+(' , the minimum is  ')+min+(', and the maximum is ')+max);
-} 
 }
+else if (num < 0) {
+   
+}
+}
+}   
+ 
 
+    function showPrimes(n){
+        for(let i = 2; i < n; i++){
+            if(!isPrime(i)) continue;
+            prime.push(i);
+           
+          
+        }
+        alert(('for n = ') +n+(' prime numbers are ' )+prime) ;
+    }
+    function isPrime(n){
+        for (let i = 2; i < n; i++){
+            if(n%i == 0)return false;
+        }
+        return true;
+    }  
+     
     </script>
       <style> 
-      h3{
+      h2{
           text-align: center;
          
-         
       }
-      h2{
+      h1{
           text-align: left;
-         
-
          
       }
       li{
           text-align: left;
-          font-size:larger;
+          font-size: larger;
           
       }
       </style>
    </head>
    <body>
-    <h3 >Statistics Calculator!</h3>
-      
-    <h1>Write the web app to prompt accepting for positive integer until the user enters a negative integer</h1>
-      
-      <ul class="n" style="list-style-type: disc;">
-         <li>If the entered text is not a positve integer number,then the web app will keep asking for a number until the valid positive integer is enterred</li>
-         <li>If the entered text is a negative integer, then the web app will show the statistics(average, min, max) of all entered positive integers</li>
-    </ul>
-    <h1 >Note:</h1>
-     <ul class="n" style="list-style-type:decimal;">
-     <li>You need to implement functions to check whether an entered text is a postive integer or not and whether an entered text is a negative integer or not</li>
-     <li>You need to implement functions to compute average, min and max of a list of integer</li>
-            
-         
-      </ul>
+    <h2>Prime Numbers Finder!</h2>
+    <h1>Write the web app to prompt accepting for positive integer number</h1>
+    
+    <ul class="n" style="list-style-type: disc;">
+       <li>If the entered text is not a positive integer number , then the web app will keep asking for a number until the valid positive integer is entered</li>
+       <li>If the entered text is a positive integer, then the web app will add into a list of prime numbers</li>
+  </ul>
+   <h1>Note:</h1>
+   <ul class="n" style="list-style-type:decimal;">
+   <li>Yand may want to use loop with label</li>
+   <li>You may want to use array with push function </li>
+          
      </body>
 </html>
